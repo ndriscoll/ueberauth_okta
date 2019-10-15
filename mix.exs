@@ -1,7 +1,7 @@
 defmodule Ueberauth.Okta.Mixfile do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.2.0"
 
   def project do
     [app: :ueberauth_okta,
@@ -24,7 +24,7 @@ defmodule Ueberauth.Okta.Mixfile do
 
   defp deps do
     [
-     {:oauth2, "~> 0.9"},
+     {:oauth2, "~> 2.0"},
      {:ueberauth, "~> 0.4"},
 
      # dev/test only dependencies

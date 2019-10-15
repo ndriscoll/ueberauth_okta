@@ -40,7 +40,10 @@ defmodule Ueberauth.Strategy.Okta.OAuth do
                   |> Keyword.merge(opts)
                   |> Keyword.merge(config)
 
+    json_library = Ueberauth.json_library()
+
     Client.new(client_opts)
+    |> OAuth2.Client.put_serializer("application/json", json_library)
   end
 
   @doc """
